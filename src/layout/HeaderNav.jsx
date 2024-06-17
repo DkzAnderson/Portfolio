@@ -95,6 +95,12 @@ export const HeaderNav = () => {
                         </NavLink>
                     </li>
 
+                    <li className={styles.listItem}>
+                        <NavLink to={"/portfolio"} className={({ isActive }) => isActive ? styles.active : ""}>
+                            Domo
+                        </NavLink>
+                    </li>
+
                 </ul>
 
             </nav>
