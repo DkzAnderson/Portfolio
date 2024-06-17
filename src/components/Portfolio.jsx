@@ -5,7 +5,7 @@ import { works } from '../data/Works'
 import { HeaderNav } from '../layout/HeaderNav'
 import { Footer } from '../layout/Footer'
 
-import foto from '../../public/foto-perfil.png'
+import foto from '../../src/assets/foto-perfil.png'
 
 export const Portfolio = () => {
   const [show,setShow] = useState(false);
