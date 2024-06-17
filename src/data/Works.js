@@ -6,7 +6,7 @@ import wowGuides2 from '../../src/assets/proyects-previews/guides-wow_tablet.png
 import wowGuides3 from '../../src/assets/proyects-previews/guides-wow_desktop.png'
 import forest1 from '../../src/assets/proyects-previews/forest-mobile.png'
 import forest2 from '../../src/assets/proyects-previews/forest-tablet.png'
-import forest3 from '../../src/assets/proyects-previews/forest-desktop.png'
+import forest3 from '../../src/assets/proyects-previews/forest_desktop.png'
 import ecoStore1 from '../../src/assets/proyects-previews/eco-store_mobile.png'
 import ecoStore2 from '../../src/assets/proyects-previews/eco-store_tablet.png'
 import ecoStore3 from '../../src/assets/proyects-previews/eco-store_desktop.png'
