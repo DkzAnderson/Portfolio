@@ -21,7 +21,7 @@ export const Portfolio = () => {
     titles: 'text-2xl text-sky-400',
 
     proyectBox1:'flex flex-col gap-5 max-w-[1200px]',
-    proyectBox2:'w-full max-h-[900px] overflow-auto sm:grid-cols-2 lg:grid-cols-3 gap-10 ',
+    proyectBox2:'w-full sm:grid-cols-2 lg:grid-cols-3 gap-10 ',
 
     allProyects: 'flex w-[280px] p-2 rounded-lg gap-4 items-center cursor-pointer text-2xl ',
     arrowUp: 'size-7 animate-pulse duration-300 ',
