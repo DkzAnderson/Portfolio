@@ -77,7 +77,7 @@ export const Start = () => {
             </h2>
             <img
               className={styles.poster}
-              src="public/foto-perfil.png"
+              src="/public/foto-perfil.png"
               alt="foto-perfil"
             />
 
