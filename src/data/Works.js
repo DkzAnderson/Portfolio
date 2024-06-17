@@ -1,3 +1,41 @@
+import neko1 from '../../src/assets/proyects-previews/neko-store_mobile.png'
+import neko2 from '../../src/assets/proyects-previews/neko-store_1.png'
+import neko3 from '../../src/assets/proyects-previews/neko-store_2.png'
+import wowGuides1 from '../../src/assets/proyects-previews/guides-wow_mobile.png'
+import wowGuides2 from '../../src/assets/proyects-previews/guides-wow_tablet.png'
+import wowGuides3 from '../../src/assets/proyects-previews/guides-wow_desktop.png'
+import forest1 from '../../src/assets/proyects-previews/forest-mobile.png'
+import forest2 from '../../src/assets/proyects-previews/forest-tablet.png'
+import forest3 from '../../src/assets/proyects-previews/forest-desktop.png'
+import ecoStore1 from '../../src/assets/proyects-previews/eco-store_mobile.png'
+import ecoStore2 from '../../src/assets/proyects-previews/eco-store_tablet.png'
+import ecoStore3 from '../../src/assets/proyects-previews/eco-store_desktop.png'
+
+
+const images = {
+    neko: [
+        neko1,
+        neko2,
+        neko3
+    ],
+    wowGuides: [
+        wowGuides1,
+        wowGuides2,
+        wowGuides3
+    ],
+    forest : [
+        forest1,
+        forest2,
+        forest3
+    ],
+    ecoStore:[
+        ecoStore1,
+        ecoStore2,
+        ecoStore3
+    ]
+}
+
+
 
 class proyect {
     constructor({
@@ -10,20 +48,12 @@ class proyect {
         this.name = name;
         this.url = url;
         this.technologies = technologies;
-        this.images = []
+        this.images = images
         this.imagesToDescription = []
         this.id = id;
         this.categories = categories;
         this.description = description;
         this.state = state
-
-        images.forEach(element => {
-            this.images.push(`../src/assets/proyects-previews/${element}`)
-        });
-
-        images.forEach(element=>{
-            this.imagesToDescription.push(element)
-        })
     }
 }
 
@@ -37,11 +67,7 @@ export const works = [
             'JavaScript',
             'SASS'
         ],
-        images: [
-            'neko-store_mobile.png',
-            'neko-store_1.png',
-            'neko-store_2.png'
-        ],
+        images: images.neko,
         state: true,
         categories: 'Desarrollo web',
         description: 'Página donde ver Animes online.'
@@ -55,12 +81,7 @@ export const works = [
             'CSS',
             'JavaScript'
         ],
-        images: [
-            'guides-wow_mobile.png',
-            'guides-wow_tablet.png',
-            'guides-wow_desktop.png',
-
-        ],
+        images: images.wowGuides,
         state: true,
         description: 'Página de guias generales de World Of Warcraft:'+
         ' Wrath of The Lich King.',
@@ -77,11 +98,7 @@ export const works = [
             'JavaScript',
             'Tailwind'
         ],
-        images: [
-            'forest-mobile.png',
-            'forest-tablet.png',
-            'forest_desktop.png'
-        ],
+        images: images.forest,
         state: false,
         description: 'RPG de combate por turnos, esta en desarrollo.',
         categories: 'Videojuego'
@@ -91,12 +108,7 @@ export const works = [
         name: 'Eco-Store',
         description: 'Landing page con diseño responsive.',
         categories: 'Desarrollo web',
-        images: [
-            'eco-store_mobile.png',
-            'eco-store_tablet.png',
-            'eco-store_desktop.png',
-
-        ],
+        images: images.ecoStore,
         technologies: [
             'HTML',
             'CSS'

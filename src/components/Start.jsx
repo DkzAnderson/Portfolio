@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { ProyectsList } from './ProyectsList'
 import { Contact } from './Contact'
 
+import perfilImage from '../assets/foto-perfil.png'
 import icon_react from '../assets/react.svg'
 import icon_html from '../assets/html-icon.png'
 import icon_js from '../assets/js-icon.png'
@@ -77,7 +78,7 @@ export const Start = () => {
             </h2>
             <img
               className={styles.poster}
-              src="../../public/foto-perfil.png"
+              src={perfilImage}
               alt="foto-perfil"
             />
 

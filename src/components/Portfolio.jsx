@@ -9,19 +9,8 @@ import foto from '../../src/assets/foto-perfil.png'
 
 
 export const Portfolio = () => {
-  function importAll(r) {
-    return r.keys().map(r);
-  }
-  
-  const images = importAll(require.context('./path/to/images', false, /\.(png|jpe?g|svg)$/));
-  
-
-
-
 
   const [show,setShow] = useState(false);
-
-  console.log(images);
 
   function ShowAllProyects (){
       setShow(!show)
