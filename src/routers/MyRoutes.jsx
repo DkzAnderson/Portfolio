@@ -3,7 +3,6 @@ import { Routes, Route, BrowserRouter , Navigate} from 'react-router-dom'
 
 import { Start } from '../components/Start'
 import { Portfolio } from '../components/Portfolio'
-import { Services } from '../components/Services'
 import { Curriculum } from '../components/Curriculum'
 import { Contact } from '../components/Contact'
 import { Footer } from '../layout/Footer'
@@ -13,21 +12,19 @@ import { Proyects } from '../components/Proyects'
 
 export const MyRoutes = () => {
 
+
   const styles = {
     mainSection : 'w-full'
   }
 
   return (
     <BrowserRouter>
-    {/* Header y Navegación */}
-    <HeaderNav/>
     { /* Contenido Central */}
       <section className={styles.mainSection}>
         <Routes>
           <Route path='/' element={<Navigate to={"/start"}/>} />
           <Route path='/start' element={<Start />} />
           <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/services' element={<Services />} />
           <Route path='/curriculum' element={<Curriculum />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/proyect/:id' element={<Proyects/>}/>
@@ -42,9 +39,6 @@ export const MyRoutes = () => {
           }/>
         </Routes>
       </section>
-
-    { /* Footer */}
-    <Footer/>
     </BrowserRouter>
   )
 }

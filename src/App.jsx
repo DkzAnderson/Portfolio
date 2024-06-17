@@ -1,7 +1,7 @@
 import { useState } from 'react'
+import { MyRoutes } from './routers/MyRoutes'
 
 import './App.css'
-import { MyRoutes } from './routers/MyRoutes'
 
 function App() {
 

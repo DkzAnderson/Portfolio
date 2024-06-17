@@ -10,6 +10,8 @@ import icon_css from '../assets/css-icon.png'
 import icon_tailwind from '../assets/tailwind-css.svg'
 import icon_sass from '../assets/sass-icon.png'
 import icon_github from '../assets/github-icon.png'
+import { HeaderNav } from '../layout/HeaderNav'
+import { Footer } from '../layout/Footer'
 
 
 export const Start = () => {
@@ -61,99 +63,104 @@ export const Start = () => {
     },[location])
 
   return (
-    <div className={styles.main}>
-      <div className={styles.content}>
+    <section className='w-full flex flex-col'>
+      <HeaderNav/>
+      <div className={styles.main}>
+        <div className={styles.content}>
 
-        <div className={styles.titleBox} id='about'>
-          <h2 className={styles.title}>
-            Hola, soy <b className={specialStyles.name}>Anderson Ollarves</b>, soy desarrollador web
-            en Perú y ofrezco mis servicios de <b className={specialStyles.marked}>programación</b>
-            y <b className={specialStyles.marked}>desarrollo</b> en todo tipo de proyectos web.
+          <div className={styles.titleBox} id='about'>
+            <h2 className={styles.title}>
+              Hola, soy <b className={specialStyles.name}>Anderson Ollarves</b>, soy desarrollador web
+              en Perú y ofrezco mis servicios de <b className={specialStyles.marked}>programación</b>
+              y <b className={specialStyles.marked}>desarrollo</b> en todo tipo de proyectos web.
 
+            </h2>
+            <img
+              className={styles.poster}
+              src="/src/assets/foto-perfil.png"
+              alt="foto-perfil"
+            />
+
+            <h3 className={styles.subTitle}>
+              Te ayudo a crear tu sitio o aplicación web, tener más
+              visibilidad y relevancia en
+              internet. <a className={styles.link} href='#contact'>
+                Contacta conmigo
+              </a>
+            </h3>
+          </div>
+
+          <h2 className={styles.othersTittles}>
+            Algunos de mis proyectos
           </h2>
-          <img
-            className={styles.poster}
-            src="/src/assets/foto-perfil.png"
-            alt="foto-perfil"
-          />
 
-          <h3 className={styles.subTitle}>
-            Te ayudo a crear tu sitio o aplicación web, tener más
-            visibilidad y relevancia en
-            internet. <a className={styles.link} href='#contact'>
-              Contacta conmigo
-            </a>
-          </h3>
+          <ProyectsList limit={3} />
+
+          <div className={styles.techContent}>
+            <h2 className={styles.othersTittles}>Conocimientos</h2>
+
+            <ul className={styles.techList} id='skills'>
+
+              {
+                technologies.map((tech, index) => {
+                  let icon
+
+                  switch (tech) {
+                    case 'CSS':
+                      icon = icon_css
+                      break;
+                    case 'JavaScript':
+                      icon = icon_js
+                      break;
+                    case 'GitHub':
+                      icon = icon_github
+                      break;
+                    case 'SASS':
+                      icon = icon_sass
+                      break;
+                    case 'Tailwind':
+                      icon = icon_tailwind
+                      break;
+                    case 'React':
+                      icon = icon_react
+                      break;
+                    default:
+                      // HTML
+                      icon = icon_html
+                      break;
+                  }
+
+                  return (
+                    <li
+                      key={index}
+                      className={styles.techItem}
+                    >
+                      <img
+                        className={styles.techIcon}
+                        src={icon}
+                        alt={tech}
+                      />
+                      <h5>
+                        {tech}
+                      </h5>
+                    </li>
+                  )
+                })
+              }
+
+            </ul>
+
+            <h4 className='text-lg text-gray-300'>
+              Actualmente sigo mejorando en las tecnologias antes
+              mencionadas y tambien estoy estudiando node.js
+            </h4>
+          </div>
+
+          <Contact />
         </div>
-
-        <h2 className={styles.othersTittles}>
-          Algunos de mis proyectos
-        </h2>
-
-        <ProyectsList limit={3} />
-
-        <div className={styles.techContent}>
-          <h2 className={styles.othersTittles}>Conocimientos</h2>
-
-          <ul className={styles.techList} id='skills'>
-
-            {
-              technologies.map((tech,index)=>{
-                let icon
-
-                switch (tech) {
-                  case 'CSS':
-                    icon = icon_css
-                    break;
-                  case 'JavaScript':
-                    icon = icon_js
-                    break;
-                  case 'GitHub':
-                    icon = icon_github
-                    break;
-                  case 'SASS':
-                    icon = icon_sass
-                    break;
-                  case 'Tailwind':
-                    icon = icon_tailwind
-                    break;
-                  case 'React':
-                    icon = icon_react
-                    break;
-                  default:
-                    // HTML
-                    icon = icon_html
-                    break;
-                }
-
-                return(
-                  <li
-                    key={index} 
-                    className={styles.techItem}
-                  >
-                    <img 
-                      className={styles.techIcon}
-                      src={icon} 
-                      alt={tech} 
-                    />
-                    <h5>
-                      {tech}
-                    </h5>
-                  </li>
-                )
-              })
-            }
-
-          </ul>
-
-          <h4 className='text-lg text-gray-300'>
-            Actualmente sigo mejorando en las tecnologias antes 
-            mencionadas y tambien estoy estudiando node.js
-          </h4>
-        </div>
-
-        <Contact/>
       </div>
-    </div>
+      <Footer/>
+    </section>
+
   )
 }

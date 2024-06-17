@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { works } from '../data/Works';
 import { ImgSlider } from './ImgSlider';
+import { HeaderNav } from '../layout/HeaderNav';
+import { Footer } from '../layout/Footer';
 
 export const Proyects = () => {
     // usamos el parametro para buscar el proyecto 
@@ -33,59 +35,66 @@ export const Proyects = () => {
     }
 
     return (
-        <section className={styles.main}>
+        <section>
+            <HeaderNav />
 
-            <div className={styles.content}>
+            <div className={styles.main}>
 
-                <div className={styles.descriptionBox}>
-                    <h2 className={styles.title}>
-                        {proyect.name}
-                    </h2>
+                <div className={styles.content}>
 
-                    <p className={styles.descriptionTxt}>
-                        {proyect.description}
-                    </p>
+                    <div className={styles.descriptionBox}>
+                        <h2 className={styles.title}>
+                            {proyect.name}
+                        </h2>
 
-                    <a
-                        target='_blank'
-                        href={proyect.url}
-                        className={styles.url}>
-                        Ir a la web del proyecto.
-                    </a>
+                        <p className={styles.descriptionTxt}>
+                            {proyect.description}
+                        </p>
+
+                        <a
+                            target='_blank'
+                            href={proyect.url}
+                            className={styles.url}>
+                            Ir a la web del proyecto.
+                        </a>
+                    </div>
+
+                    <ul className={styles.imgBoxDesktop}>
+                        {
+                            proyect.images.slice(0, 2).map((image, imageIndex) => {
+                                return (
+                                    <li
+                                        key={imageIndex}
+                                        className={styles.imgListLi}
+                                    >
+                                        <img
+                                            className={styles.imgListItem}
+                                            src={image}
+                                            alt={`${proyect.name} preview image ${imageIndex}`}
+                                        />
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+
+                    <div className={styles.imgBoxDesktop}>
+                        <img
+                            className={styles.lastImage}
+                            src={proyect.images[2]}
+                            alt={`${proyect.name} preview image 3`}
+                        />
+                    </div>
+
+                    <div className={styles.imgBoxMobile}>
+                        <ImgSlider images={proyect.images} />
+                    </div>
                 </div>
 
-                <ul className={styles.imgBoxDesktop}>
-                    {
-                        proyect.images.slice(0, 2).map((image, imageIndex) => {
-                            return (
-                                <li
-                                    key={imageIndex}
-                                    className={styles.imgListLi}
-                                >
-                                    <img
-                                        className={styles.imgListItem}
-                                        src={image}
-                                        alt={`${proyect.name} preview image ${imageIndex}`}
-                                    />
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-
-                <div className={styles.imgBoxDesktop}>
-                    <img
-                        className={styles.lastImage}
-                        src={proyect.images[2]}
-                        alt={`${proyect.name} preview image 3`}
-                    />
-                </div>
-
-                <div className={styles.imgBoxMobile}>
-                    <ImgSlider images={proyect.images} />
-                </div>
             </div>
 
+            <Footer />
         </section>
+
     )
 }

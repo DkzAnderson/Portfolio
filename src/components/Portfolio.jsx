@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { ProyectsList } from './ProyectsList'
 import { ProyectPreview } from './ProyectPreview'
 import { works } from '../data/Works'
+import { HeaderNav } from '../layout/HeaderNav'
+import { Footer } from '../layout/Footer'
 
 export const Portfolio = () => {
   const [show,setShow] = useState(false);
@@ -40,50 +42,54 @@ export const Portfolio = () => {
   }
 
   return (
-    <section className={styles.main}>
-      <div className={styles.content}>
-        <div className={styles.proyectBox1}>
-          <h2 className={styles.titles}>
-            Ultimos proyectos
-          </h2>
+    <section className='w-full flex flex-col'>
+      <HeaderNav />
+      <div className={styles.main}>
+        <div className={styles.content}>
+          <div className={styles.proyectBox1}>
+            <h2 className={styles.titles}>
+              Ultimos proyectos
+            </h2>
 
-          <ProyectsList limit={3} />
-        </div>
-
-        <span
-          className={styles.allProyects}
-          onClick={e => { ShowAllProyects() }}
-        >
-          <h5>
-            Todos mis proyectos
-          </h5>
-
-          <div className=''>
-            <svg className={styles.arrowDown} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-            </svg>
-
-            <svg className={styles.arrowUp} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
-            </svg>
-
+            <ProyectsList limit={3} />
           </div>
-        </span>
 
-        <ul className={styles.proyectBox2}>
-          {
-            works.map(proyect => {
-              return (
-                <ProyectPreview
-                  key={proyect.name}
-                  proyect={proyect}
-                />
-              )
-            })
-          }
-        </ul>
+          <span
+            className={styles.allProyects}
+            onClick={e => { ShowAllProyects() }}
+          >
+            <h5>
+              Todos mis proyectos
+            </h5>
+
+            <div className=''>
+              <svg className={styles.arrowDown} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+              </svg>
+
+              <svg className={styles.arrowUp} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+              </svg>
+
+            </div>
+          </span>
+
+          <ul className={styles.proyectBox2}>
+            {
+              works.map(proyect => {
+                return (
+                  <ProyectPreview
+                    key={proyect.name}
+                    proyect={proyect}
+                  />
+                )
+              })
+            }
+          </ul>
+        </div>
       </div>
+      <Footer />
     </section>
   )
 }
