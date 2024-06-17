@@ -18,7 +18,7 @@ class proyect {
         this.state = state
 
         images.forEach(element => {
-            this.images.push(`./src/assets/proyects-previews/${element}`)
+            this.images.push(`../src/assets/proyects-previews/${element}`)
         });
 
         images.forEach(element=>{
