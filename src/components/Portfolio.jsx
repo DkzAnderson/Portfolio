@@ -7,6 +7,8 @@ import { Footer } from '../layout/Footer'
 
 import foto from '../../src/assets/foto-perfil.png'
 
+const images = require.context('../../src/assets',true);
+
 export const Portfolio = () => {
   const [show,setShow] = useState(false);
 
@@ -93,12 +95,12 @@ export const Portfolio = () => {
       </div>
       <div>
         <img className='size-20 object-cover 1'
-          src="../../public/foto-perfil.png" 
+          src={images(`./css-icon.png`)}
           alt="" 
         />
         
         <img className='size-20 object-cover 2'
-          src="../public/foto-perfil.png" 
+          src={images(`./proyects-previews/neko-store_1.png`)} 
           alt="" 
         />
         
