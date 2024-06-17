@@ -37,7 +37,8 @@ export const Start = () => {
       titleBox: 'grid gap-5 w-full grid-rows-3 sm:grid-cols-3 sm:grid-rows-2 justify-center justify-items-center sm:justify-items-start',
       title: 'text-2xl md:text-4xl text-white sm:col-span-2 row-start-2 sm:row-start-1',
       subTitle: 'text-xl font-light text-gray-500 row-start-3 sm:row-start-2 sm:col-span-3',
-      poster: 'rounded-full size-[250px] object-cover sm:col-start-3',
+      poster: 'size-[250px] border-2 rounded-full p-3 sm:col-start-3',
+      posterImg: 'rounded-full size-full object-cover ',
 
       techContent: 'flex flex-col gap-5 w-full my-20',
       othersTittles: 'text-3xl text-sky-400 w-full',
@@ -76,11 +77,14 @@ export const Start = () => {
               y <b className={specialStyles.marked}>desarrollo</b> en todo tipo de proyectos web.
 
             </h2>
+
+            <picture className={styles.poster}>
             <img
-              className={styles.poster}
+              className={styles.posterImg}
               src={perfilImage}
               alt="foto-perfil"
             />
+            </picture>
 
             <h3 className={styles.subTitle}>
               Te ayudo a crear tu sitio o aplicación web, tener más
