@@ -7,11 +7,17 @@ import { Footer } from '../layout/Footer'
 
 import foto from '../../src/assets/foto-perfil.png'
 
-const images = require.context('../../src/assets',true);
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+const images = importAll(require.context('./path/to/images', false, /\.(png|jpe?g|svg)$/));
+
 
 export const Portfolio = () => {
   const [show,setShow] = useState(false);
 
+  console.log(images);
 
   function ShowAllProyects (){
       setShow(!show)
@@ -95,12 +101,12 @@ export const Portfolio = () => {
       </div>
       <div>
         <img className='size-20 object-cover 1'
-          src={images(`./css-icon.png`)}
+          src={""}
           alt="" 
         />
         
         <img className='size-20 object-cover 2'
-          src={images(`./proyects-previews/neko-store_1.png`)} 
+          src="" 
           alt="" 
         />
         
