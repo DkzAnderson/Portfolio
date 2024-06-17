@@ -5,8 +5,6 @@ import { works } from '../data/Works'
 import { HeaderNav } from '../layout/HeaderNav'
 import { Footer } from '../layout/Footer'
 
-import foto from '../../src/assets/foto-perfil.png'
-
 
 export const Portfolio = () => {
 
@@ -91,37 +89,6 @@ export const Portfolio = () => {
             }
           </ul>
         </div>
-      </div>
-      <div>
-        <img className='size-20 object-cover 1'
-          src={""}
-          alt="" 
-        />
-        
-        <img className='size-20 object-cover 2'
-          src="" 
-          alt="" 
-        />
-        
-        <img className='size-20 object-cover 3'
-          src="/public/foto-perfil.png" 
-          alt="" 
-        />
-        
-        <img className='size-20 object-cover 4'
-          src="public/foto-perfil.png" 
-          alt="" 
-        />
-        
-        <img className='size-20 object-cover 5' 
-          src={foto} 
-          alt="" 
-        />
-        
-        <img className='size-20 object-cover 6'
-          src="./public/foto-perfil.png" 
-          alt="" 
-        />
       </div>
       <Footer />
     </section>
