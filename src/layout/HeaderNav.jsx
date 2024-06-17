@@ -67,6 +67,13 @@ export const HeaderNav = () => {
                         className={({ isActive }) => isActive ? menuMobileStyles.active : ""}>
                         Portafolio
                     </NavLink>
+                </li>                <li className={menuMobileStyles.ListItem}>
+                    <NavLink
+                        onClick={e => { SetMenu(!menu) }}
+                        to={"/portfolio"}
+                        className={({ isActive }) => isActive ? menuMobileStyles.active : ""}>
+                        Prueba 2
+                    </NavLink>
                 </li>
             </ul>
 
@@ -97,7 +104,7 @@ export const HeaderNav = () => {
 
                     <li className={styles.listItem}>
                         <NavLink to={"/portfolio"} className={({ isActive }) => isActive ? styles.active : ""}>
-                            Domo
+                            Prueba 1
                         </NavLink>
                     </li>
 
