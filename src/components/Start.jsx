@@ -37,8 +37,8 @@ export const Start = () => {
       titleBox: 'grid gap-5 w-full grid-rows-3 sm:grid-cols-3 sm:grid-rows-2 justify-center justify-items-center sm:justify-items-start',
       title: 'text-2xl md:text-4xl text-white sm:col-span-2 row-start-2 sm:row-start-1',
       subTitle: 'text-xl font-light text-gray-500 row-start-3 sm:row-start-2 sm:col-span-3',
-      poster: 'size-[250px] border-2 rounded-full p-3 sm:col-start-3',
-      posterImg: 'rounded-full size-full object-cover ',
+      poster: 'size-[250px] border-4 rounded-full p-2 sm:col-start-3',
+      posterImg: 'rounded-full size full object-cover ',
 
       techContent: 'flex flex-col gap-5 w-full my-20',
       othersTittles: 'text-3xl text-sky-400 w-full',
