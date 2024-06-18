@@ -14,7 +14,7 @@ export const MyRoutes = () => {
 
 
   const styles = {
-    mainSection : 'w-full'
+    mainSection : 'w-full max-w-[600px]'
   }
 
   return (
