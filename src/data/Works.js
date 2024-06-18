@@ -12,30 +12,6 @@ import ecoStore2 from '../../src/assets/proyects-previews/eco-store_tablet.png'
 import ecoStore3 from '../../src/assets/proyects-previews/eco-store_desktop.png'
 
 
-const images = {
-    neko: [
-        neko1,
-        neko2,
-        neko3
-    ],
-    wowGuides: [
-        wowGuides1,
-        wowGuides2,
-        wowGuides3
-    ],
-    forest : [
-        forest1,
-        forest2,
-        forest3
-    ],
-    ecoStore:[
-        ecoStore1,
-        ecoStore2,
-        ecoStore3
-    ]
-}
-
-
 
 class proyect {
     constructor({
@@ -67,7 +43,11 @@ export const works = [
             'JavaScript',
             'SASS'
         ],
-        images: images.neko,
+        images: [
+            neko1,
+            neko2,
+            neko3
+        ],
         state: true,
         categories: 'Desarrollo web',
         description: 'Página donde ver Animes online.'
@@ -81,7 +61,11 @@ export const works = [
             'CSS',
             'JavaScript'
         ],
-        images: images.wowGuides,
+        images: [
+            wowGuides1,
+            wowGuides2,
+            wowGuides3
+        ],
         state: true,
         description: 'Página de guias generales de World Of Warcraft:'+
         ' Wrath of The Lich King.',
@@ -90,7 +74,7 @@ export const works = [
 
     new proyect({  // forest
         name: 'Forest',
-        url: '',
+        url: 'https://dkzanderson.github.io/Forest/',
         technologies: [
             'HTML',
             'CSS',
@@ -98,7 +82,11 @@ export const works = [
             'JavaScript',
             'Tailwind'
         ],
-        images: images.forest,
+        images: [
+            forest1,
+            forest2,
+            forest3
+        ],
         state: false,
         description: 'RPG de combate por turnos, esta en desarrollo.',
         categories: 'Videojuego'
@@ -108,7 +96,11 @@ export const works = [
         name: 'Eco-Store',
         description: 'Landing page con diseño responsive.',
         categories: 'Desarrollo web',
-        images: images.ecoStore,
+        images: [
+            ecoStore1,
+            ecoStore2,
+            ecoStore3
+        ],
         technologies: [
             'HTML',
             'CSS'
