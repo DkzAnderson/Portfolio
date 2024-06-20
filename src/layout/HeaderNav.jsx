@@ -5,6 +5,8 @@ import './HeaderNav.css'
 export const HeaderNav = () => {
     const [menu,SetMenu] = useState(false);
 
+    const cvUrl = 'https://dkzanderson.github.io/CV-Virtual/'
+
     const styles = {
         nav  : 'w-full hidden sm:flex max-w-[1024px] justify-between items-center px-5 md:px-5',
         list : 'hidden md:flex w-full justify-end gap-12',
@@ -67,7 +69,16 @@ export const HeaderNav = () => {
                         className={({ isActive }) => isActive ? menuMobileStyles.active : ""}>
                         Portafolio
                     </NavLink>
-                </li>                
+                </li>   
+                <li className={styles.listItem}>
+                        <a 
+                            target='_blank'
+                            href={cvUrl} 
+                            className={({isActive}) => isActive ? styles.active : '' }
+                        >
+                            Curriculum
+                        </a>
+                </li>             
             </ul>
 
             <nav className={styles.nav}>
@@ -93,6 +104,15 @@ export const HeaderNav = () => {
                         <NavLink to={"/portfolio"} className={({ isActive }) => isActive ? styles.active : ""}>
                             Portafolio
                         </NavLink>
+                    </li>
+                    <li className={styles.listItem}>
+                        <a 
+                            target='_blank'
+                            href={cvUrl} 
+                            className={({isActive}) => isActive ? styles.active : '' }
+                        >
+                            Curriculum
+                        </a>
                     </li>
 
                 </ul>
